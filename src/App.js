@@ -1,10 +1,16 @@
 import "./styles.css";
+import 'react-grid-layout/css/styles.css'
+import 'react-resizable/css/styles.css'
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout";
+import Preview from "./components/Preview";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+        <Routes>
+            <Route path="/" element={<Layout />} />
+            <Route path="preview" element={<Preview />} />
+        </Routes>
   );
 }
